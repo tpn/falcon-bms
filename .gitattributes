@@ -1,1 +1,3 @@
-* text eol=crlf
+*.txt text eol=crlf
+*.tmj text eol=crlf
+*.tmm text eol=crlf
