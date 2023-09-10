@@ -28,13 +28,13 @@ Rem Wingman, AWACS
 Rem ---------------------------------------------------------------------------
 
 BTN H1U /I /H Wingman_AttackMyTarget
-        /O AWACS_VectorAlternate
+        /O    AWACS_VectorAlternate
 
 BTN H1D /I /H Wingman_RTB
-        /O AWACS_VectorHome
+        /O    AWACS_VectorHome
 
-BTN H1L /I /H AWACS_NearestThreat
+BTN H1L    /H AWACS_NearestThreat
 
-BTN H1R /I /H AWACS_Declare
+BTN H1R    /H AWACS_Declare
 
 
