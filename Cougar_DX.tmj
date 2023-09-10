@@ -1,0 +1,18 @@
+Rem # Cougar_DX.tmj, version 2020-01-30
+Rem # To be used together with Cougar_DXt.tmm and the BMS - Basic TM Cougar_DX.key file!
+Rem # For more info see Device Setup Guide.pdf.
+
+
+     USE MDEF Cougar_DX.tmm
+     USE ZERO_MOUSE
+     DISABLE MOUSE
+     USE ALL_DIRECTX_BUTTONS
+
+	 
+     BTN TG1 /I /T 2D_Cockpit /T 3D_Cockpit
+             /O /H DX1
+
+     BTN S4 /H {DX4 Wheelbrakes}
+
+     LBRK 5 2 (0 10 100) ^ (/H Wheelbrakes)
+     RBRK 5 2 (0 10 100) ^ (/H Wheelbrakes)
