@@ -1,18 +1,40 @@
 Rem # Cougar_DX.tmj, version 2020-01-30
-Rem # To be used together with Cougar_DXt.tmm and the BMS - Basic TM Cougar_DX.key file!
+Rem # To be used together with Cougar_DXt.tmm and the
+Rem # BMS - Basic TM Cougar_DX.key file!
 Rem # For more info see Device Setup Guide.pdf.
 
 
-     USE MDEF Cougar_DX.tmm
-     USE ZERO_MOUSE
-     DISABLE MOUSE
-     USE ALL_DIRECTX_BUTTONS
+USE MDEF Cougar_DX.tmm
+USE ZERO_MOUSE
+DISABLE MOUSE
+USE ALL_DIRECTX_BUTTONS
 
-	 
-     BTN TG1 /I /T 2D_Cockpit /T 3D_Cockpit
-             /O /H DX1
+Rem ---------------------------------------------------------------------------
+Rem Joystick Buttons
+Rem ---------------------------------------------------------------------------
 
-     BTN S4 /H {DX4 Wheelbrakes}
+BTN TG1 /H Stick_FirstTriggerDetent
+BTN TG2 /H Stick_SecondTriggerDetent
 
-     LBRK 5 2 (0 10 100) ^ (/H Wheelbrakes)
-     RBRK 5 2 (0 10 100) ^ (/H Wheelbrakes)
+Rem ---------------------------------------------------------------------------
+Rem Speed brake
+Rem ---------------------------------------------------------------------------
+
+BTN T9  /P /H TQS_OpenSpeedBrake   /R DLY(100) TQS_ToggleSpeedBrake
+BTN T10 /P    TQS_ToggleSpeedBrake /R          TQS_ToggleSpeedBrake
+
+Rem ---------------------------------------------------------------------------
+Rem Wingman, AWACS
+Rem ---------------------------------------------------------------------------
+
+BTN H1U /I /H Wingman_AttackMyTarget
+        /O AWACS_VectorAlternate
+
+BTN H1D /I /H Wingman_RTB
+        /O AWACS_VectorHome
+
+BTN H1L /I /H AWACS_NearestThreat
+
+BTN H1R /I /H AWACS_Declare
+
+

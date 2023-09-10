@@ -6,3 +6,36 @@ Rem # For more info see Device Setup Guide.pdf.
 3D_Cockpit = 3
 Wheelbrakes = k
 
+Rem # Trent customizations.
+
+Stick_FirstTriggerDetent = CTL /
+Stick_SecondTriggerDetent = ALT /
+
+TQS_ToggleSpeedBrake = b
+TQS_OpenSpeedBrake = SHF b
+
+AWACS_Declare = <q DLY(60) 2>
+AWACS_NearestThreat = <q DLY(60) q DLY(60) 1>
+AWACS_Picture = <q DLY(60) 1>
+AWACS_VectorHome = <q DLY(60) q DLY(60) 5>
+AWACS_VectorAlternate = <q DLY(60) q DLY(60) 6>
+
+Wingman_WeaponsFree = <w DLY(60) 4>
+Wingman_WeaponsHold = <w DLY(60) 5>
+Wingman_AttackMyTarget = <w DLY(60) 8>
+Wingman_RTB = <w DLY(60) w DLY(60) w DLY(60) 2>
+
+Shortcut_NextWaypoint = x
+Shortcut_PrevWaypoint = z
+Shortcut_ToggleJammer = j
+Shortcut_NextAGWeapon = ALT BSP
+
+Cockpit_CockpitDefaults_Load = <ALT c DLY(60) l>
+Cockpit_CockpitDefaults_Save = <ALT c DLY(60) s>
+
+ViewExt_TargetToSelfCamera = 6
+ViewExt_TargetToWeaponCamera = CTL 7
+ViewExt_TargetCamera = SHF 6
+ViewExt_WeaponCamera = SHF 7
+ViewExt_TargetToWeaponCamera = CTL 7
+
