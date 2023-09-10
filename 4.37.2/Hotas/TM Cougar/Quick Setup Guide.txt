@@ -1,0 +1,47 @@
+For detailed instructions refer to the BMS Device Setup Guide.pdf.
+
+===================================================
+
+1. CCP Settings:
+    Verify the axis mapping configuration within your TM Hotas Cougar CCP is setup correctly.
+
+2. Cougar profile files:
+    Open Foxy, load, compile and download Cougar_DX.tmm and Cougar_DX.tmj  to the Cougar.
+
+3. Falcon BMS.cfg settings:
+    Set the value for set g_bHotasDgftSelfCancel to 1.
+
+4. Select the Main Input Device:
+    Select you main Input device from the drop down list. In this case “Thrustmaster HOTAS Cougar”.
+
+5. Load the Key File:
+    Click on LOAD button and select the key file : BMS - BasicDX TM Cougar
+
+6. VIEW CONTROL Settings:
+    If you have no rudder device connected you should make sure that the “Enable Roll-linked NWS” checkbox is active.
+
+7. FLIGHT CONTROL Settings:
+    Set the Axis as follows:
+    - Throttle Axis 		-> 	Throttle - Thrustmaster HOTAS Cougar
+    - Pitch Axis 		-> 	Joystick Y – Thrustmaster HOTAS Cougar
+    - Roll Axis 		-> 	Joystick X – Thrustmaster HOTAS Cougar
+    - All Other Axis		->	Keyboard
+
+8. AVIONICS CONTROL Settings:
+    Set the Axis as follows:
+    - Radar Ant. Elev. 		-> 	Antenna - Thrustmaster HOTAS Cougar
+    - Cursor X 			-> 	Toe Break Right – Thrustmaster HOTAS Cougar
+    - Cursor Y 			-> 	Toe Break Left – Thrustmaster HOTAS Cougar
+    - Range Knob 		-> 	Range – Thrustmaster HOTAS Cougar
+    - All Other Axis		->	Keyboard
+
+9. Set afterburner / Recenter:
+    Set the the afterburner detent (SET AB) and recenter the device (CENTER).
+
+10. Test the device buttons:
+    Press one button on each device and verify the correct output.
+
+11. Test in 3d:
+    Check the shifted layer in 3d.
+
+Have fun!

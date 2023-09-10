@@ -1,0 +1,27 @@
+###################################################
+###
+###   NOTE:
+###   This is an example how it could look like in
+###   your DeviceSorting.txt. The difference is, 
+###   that in the first example a single controller
+###   (Main Input device) is assumed an in the 
+###   second two controllers (Stick & Throttle) are 
+###   used.
+###
+###   Btw., the HOTAS lines are fake and should of
+###   course not be copied to your DeviceSorting.txt
+###
+###################################################
+
+### Example of a single main input controller 
+### -> MFDs are 2nd & 3rd device:
+{AB123456-0000-0000-0000-504944564944} "HOTAS - Stick and Throttle"
+{B351044F-0000-0000-0000-504944564944} "F16 MFD 1"
+{B352044F-0000-0000-0000-504944564944} "F16 MFD 2"
+
+### Example of a two main input controllers
+### -> MFDs are 3rd & 4th device:
+{AB123456-0000-0000-0000-504944564944} "HOTAS 1st device - Stick"
+{AB123456-0000-0000-0000-504944564944} "HOTAS 2nd device - Throttle"
+{B351044F-0000-0000-0000-504944564944} "F16 MFD 1"
+{B352044F-0000-0000-0000-504944564944} "F16 MFD 2"

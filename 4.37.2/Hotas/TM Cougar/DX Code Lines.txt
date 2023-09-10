@@ -1,0 +1,295 @@
+#===================================================================================
+
+#################################################################
+###
+### Full real TM HOTAS Couger DX button mapping,
+### this is the UNSHIFTED (without holding Pinky/S3) layer.
+###
+### Notes:
+###
+### Windows counts the buttons from DX 1 to 32,
+### BMS counts the buttons from DX 0 to 31.
+###
+### For the DX to work properly, you HAVE to make sure that
+### the Falcon BMS config file includes the following setting:
+###
+### set g_bHotasDgftSelfCancel 1
+### (this should be there by default, please just crosscheck)
+###
+### For more information how to change DX button assignments
+### please refer to the TECHNICAL MANUAL.pdf, chapter 10 - Key Files
+###
+### located in the ...\Docs\ folder
+###
+#################################################################
+
+SimDoNothing -1 0 0XFFFFFFFF 0 0 0 -2 "========= HOTAS UNSHIFTED ========="
+
+# The 1st number after the function name is the DX button number,
+# the rest of the line is always the same and irrelevant for us.
+
+# TG1 (Win DX1 = BMS DX0)
+SimTriggerFirstDetent 0 -1 -2 0 0x0 -1
+
+# Pickle/S2 (Win DX2 = BMS DX1)
+SimPickle 1 -1 -2 0 0x0 -1
+
+# Pinky/S3 (Win DX3 = BMS DX2)
+SimHotasPinkyShift 2 -1 -2 0 0x0 -1
+
+# Paddle/S4 (Win DX4 = BMS DX3)
+SimAPOverride 3 -1 -2 0 0x0 -1
+
+# MslStep/S1 (Win DX5 = BMS DX4)
+SimMissileStep 4 -1 -2 0 0x0 -1
+
+# TG2 (Win DX6 = BMS DX5)
+SimTriggerSecondDetent 5 -1 -2 0 0x0 -1
+
+# TMS/H2 (Win DX7-10 = BMS DX6-9)
+SimTMSUp 6 -1 -2 0 0x0 -1
+SimTMSRight 7 -1 -2 0 0x0 -1
+SimTMSDown 8 -1 -2 0 0x0 -1
+SimTMSLeft 9 -1 -2 0 0x0 -1
+
+# DMS/H3 (Win DX11-14 = BMS DX10-13)
+SimDMSUp 10 -1 -2 0 0x0 -1
+SimDMSRight 11 -1 -2 0 0x0 -1
+SimDMSDown 12 -1 -2 0 0x0 -1
+SimDMSLeft 13 -1 -2 0 0x0 -1
+
+# CMS/H4 (Win DX15-18 = BMS DX14-17)
+SimCMSUp 14 -1 -2 0 0x0 -1
+SimCMSRight 15 -1 -2 0 0x0 -1
+SimCMSDown 16 -1 -2 0 0x0 -1
+SimCMSLeft 17 -1 -2 0 0x0 -1
+
+# Cursor Enable/T1 (Win DX19 = BMS DX18)
+SimCursorEnable 18 -1 -2 0 0x0 -1
+
+# Radio Switch/T2-T5 (Win DX20-23 = BMS DX19-22)
+SimTransmitCom2 19 -1 -2 0 0x0 -1
+SimTransmitCom1 20 -1 -2 0 0x0 -1
+SimCommsSwitchRight 21 -1 -2 0 0x0 -1
+SimCommsSwitchLeft 22 -1 -2 0 0x0 -1
+
+# Uncage/T6 (Win DX24 = BMS DX23)
+SimToggleMissileCage 23 -1 -2 0 0x0 -1
+
+# Dogfight/T7-8 (Win DX25-26 = BMS DX24-25)
+SimSelectSRMOverride 24 -1 -2 0 0x0 -1
+SimSelectMRMOverride 25 -1 -2 0 0x0 -1
+
+# Speedbrakes/T9-10 (Win DX27-28 = BMS DX26-27)
+AFBrakesOut 26 -1 -2 0 0x0 -1
+AFBrakesIn 27 -1 -2 0 0x0 -1
+
+### The POV hat has its own syntax.
+### We map TRIM for the UNSHIFTED layer here.
+AFElevatorTrimUp 0 -1 -3 0 0x0 0
+SimDoNothing 0 -1 -3 1 0x0 0
+AFAileronTrimRight 0 -1 -3 2 0x0 0
+SimDoNothing 0 -1 -3 3 0x0 0
+AFElevatorTrimDown 0 -1 -3 4 0x0 0
+SimDoNothing 0 -1 -3 5 0x0 0
+AFAileronTrimLeft 0 -1 -3 6 0x0 0
+SimDoNothing 0 -1 -3 7 0x0 0
+
+
+#==================================================================================
+
+#####################################################################
+###
+### This is the SHIFTED (with holding Pinky/S3) layer.
+### 
+### Pressing PINKY/S3 + some button will result in a DX
+### number which is "original DX button number + 256".
+###
+### So e.g. the Uncage button - which is Win DX24 / BMS DX23
+### by default - will become BMS DX23+256 = DX279 here.
+###
+### Shifted buttons that should do THE SAME as the unshifted ones
+### do NOT need to be mapped at all.
+### Shifted buttons that should do NOTHING at all (hence only work
+### as unshifted buttons) need to be mapped to "SimDoNothing".
+###
+### NOTE: for the DX shifting to work properly, you HAVE to make sure
+### that the Falcon BMS config file includes the following setting:
+###
+### set g_nHotasPinkyShiftMagnitude 256
+### (this should be there by default, please just crosscheck)
+###
+#####################################################################
+
+SimDoNothing -1 0 0XFFFFFFFF 0 0 0 -2 "========= HOTAS SHIFTED ========="
+
+# TG1 (Win DX1 = BMS DX0+256 = BMS DX256)
+SimTriggerFirstDetent 256 -1 -2 0 0x0 -1
+
+# Pickle/S2 (Win DX2 = BMS DX1+256 = BMS DX257)
+RecenterTrackIR 257 -1 -2 0 0x0 -1
+
+# Pinky/S3 (Win DX3 = BMS DX2+256 = BMS DX258)
+SimHotasPinkyShift 258 -1 -2 0 0x0 -1
+
+# Paddle/S4 (...and so on...)
+SimAPOverride 259 -1 -2 0 0x0 117
+
+# MslStep/S1
+SimFuelDoorToggle 260 -1 -2 0 0x0 311
+
+# TG2
+SimEject 261 -1 -2 0 0x0 -1
+
+# TMS/H2
+AFResetTrim 262 -1 -2 0 0x0 -1
+SimICPAA 263 -1 -2 0 0x0 125
+SimICPAG 264 -1 -2 0 0x0 115
+SimICPNav 265 -1 -2 0 0x0 125
+
+# DMS/H3
+ToggleNVGMode 266 -1 -2 0 0x0 -1
+SimAVTRToggle 267 -1 -2 0 0x0 -1
+SimVisorToggle 268 -1 -2 0 0x0 -1
+SimDoNothing 269 -1 -2 0 0x0 -1
+
+# CMS/H4
+AFGearToggle 270 -1 -2 0 0x0 116
+SimParkingBrakeCycle 271 -1 -2 0 0x0 115
+SimCATSwitch 272 -1 -2 0 0x0 116
+SimDoNothing 273 -1 -2 0 0x0 -1
+
+# Cursor Enable/T1
+SimRadarCursorZero 274 -1 -2 0 0x0 123
+
+# Radio Switch/T2-5
+SimTransmitCom2 275 -1 -2 0 0x0 -1
+SimTransmitCom1 276 -1 -2 0 0x0 -1
+SimCommsSwitchRight 277 -1 -2 0 0x0 -1
+SimCommsSwitchLeft 278 -1 -2 0 0x0 -1
+
+# Uncage/T6
+SimThrottleIdleDetent 279 -1 -2 0 0x0 314
+
+# Dogfight/T7-8 unmapped, they should ALWAYS use unshifted functionality,
+# just listed here for reference.
+# SimDoNothing 280 -1 -2 0 0x0 -1
+# SimDoNothing 281 -1 -2 0 0x0 -1
+
+# Speedbrakes/T9-10 unmapped, they should ALWAYS use unshifted functionality,
+# just listed here for reference.
+# FOVToggle 282 -1 -2 0 0x0 -1
+# SimDoNothing 283 -1 -2 0 0x0 -1
+
+
+### The POV hat has its own syntax.
+### We map POV change for the SHIFTED layer here.
+OTWViewUp 2 -1 -3 0 0x0 0
+SimDoNothing 2 -1 -3 1 0x0 0
+OTWViewRight 2 -1 -3 2 0x0 0
+SimDoNothing 2 -1 -3 3 0x0 0
+OTWViewDown 2 -1 -3 4 0x0 0
+SimDoNothing 2 -1 -3 5 0x0 0
+OTWViewLeft 2 -1 -3 6 0x0 0
+SimDoNothing 2 -1 -3 7 0x0 0
+
+#==================================================================================
+
+#################################################################
+###
+### TM MFD Cougar mappings, left and right MFD.
+###
+### This assumes that you have plugged in the Hotas Cougar as
+### your 1st DX device in Windows, and the MFDs as 2nd (left)
+### and 3rd (right) device.
+###
+### The 1st DX device buttons will be 0 to 31,
+### the 2nd DX device buttons will be 32 to 63,
+### the 3rd DX device buttons will be 64 to 91,
+### ...and so on, each DX device starts +32.
+###
+### If you use other devices, simply do the math for moving the
+### button numbers around.
+###
+#################################################################
+
+SimDoNothing -1 0 0XFFFFFFFF 0 0 0 -2 "========= LEFT MFD UNSHIFTED ========="
+
+# OSBs 1 to 20 (left) (Win DX33-52 = BMS DX32-51)
+SimCBEOSB_1L 32 -1 -2 0 0x0 126
+SimCBEOSB_2L 33 -1 -2 0 0x0 126
+SimCBEOSB_3L 34 -1 -2 0 0x0 126
+SimCBEOSB_4L 35 -1 -2 0 0x0 126
+SimCBEOSB_5L 36 -1 -2 0 0x0 126
+SimCBEOSB_6L 37 -1 -2 0 0x0 126
+SimCBEOSB_7L 38 -1 -2 0 0x0 126
+SimCBEOSB_8L 39 -1 -2 0 0x0 126
+SimCBEOSB_9L 40 -1 -2 0 0x0 126
+SimCBEOSB_10L 41 -1 -2 0 0x0 126
+SimCBEOSB_11L 42 -1 -2 0 0x0 126
+SimCBEOSB_12L 43 -1 -2 0 0x0 126
+SimCBEOSB_13L 44 -1 -2 0 0x0 126
+SimCBEOSB_14L 45 -1 -2 0 0x0 126
+SimCBEOSB_15L 46 -1 -2 0 0x0 126
+SimCBEOSB_16L 47 -1 -2 0 0x0 126
+SimCBEOSB_17L 48 -1 -2 0 0x0 126
+SimCBEOSB_18L 49 -1 -2 0 0x0 126
+SimCBEOSB_19L 50 -1 -2 0 0x0 126
+SimCBEOSB_20L 51 -1 -2 0 0x0 126
+
+# SYM up/down (left) (Win DX53-54 = BMS DX52-53)
+SimDoNothing 52 -1 -2 0 0x0 -1
+SimDoNothing 53 -1 -2 0 0x0 -1
+
+# CON up/down (left) (Win DX55-56 = BMS DX54-55)
+SimDoNothing 54 -1 -2 0 0x0 -1
+SimDoNothing 55 -1 -2 0 0x0 -1
+
+# BRT up/down (left) (Win DX57-58 = BMS DX56-57)
+SimCBEOSB_BRTUP_L 56 -1 -2 0 0x0 126
+SimCBEOSB_BRTDOWN_L 57 -1 -2 0 0x0 126
+
+# GAIN up/down (left) (Win DX59-60 = BMS DX58-59)
+SimRadarGainUp 58 -1 -2 0 0x0 126
+SimRadarGainDown 59 -1 -2 0 0x0 126
+
+#==================================================================================
+SimDoNothing -1 0 0XFFFFFFFF 0 0 0 -2 "========= RIGHT MFD UNSHIFTED ========="
+
+# OSBs 1 to 20 (right) (Win DX65-84 = BMS DX64-83)
+SimCBEOSB_1R 64 -1 -2 0 0x0 126
+SimCBEOSB_2R 65 -1 -2 0 0x0 126
+SimCBEOSB_3R 66 -1 -2 0 0x0 126
+SimCBEOSB_4R 67 -1 -2 0 0x0 126
+SimCBEOSB_5R 68 -1 -2 0 0x0 126
+SimCBEOSB_6R 69 -1 -2 0 0x0 126
+SimCBEOSB_7R 70 -1 -2 0 0x0 126
+SimCBEOSB_8R 71 -1 -2 0 0x0 126
+SimCBEOSB_9R 72 -1 -2 0 0x0 126
+SimCBEOSB_10R 73 -1 -2 0 0x0 126
+SimCBEOSB_11R 74 -1 -2 0 0x0 126
+SimCBEOSB_12R 75 -1 -2 0 0x0 126
+SimCBEOSB_13R 76 -1 -2 0 0x0 126
+SimCBEOSB_14R 77 -1 -2 0 0x0 126
+SimCBEOSB_15R 78 -1 -2 0 0x0 126
+SimCBEOSB_16R 79 -1 -2 0 0x0 126
+SimCBEOSB_17R 80 -1 -2 0 0x0 126
+SimCBEOSB_18R 81 -1 -2 0 0x0 126
+SimCBEOSB_19R 82 -1 -2 0 0x0 126
+SimCBEOSB_20R 83 -1 -2 0 0x0 126
+
+# SYM up/down (right) (Win DX85-86 = BMS DX84-85)
+SimDoNothing 84 -1 -2 0 0x0 -1
+SimDoNothing 85 -1 -2 0 0x0 -1
+
+# CON up/down (right) (Win DX87-88 = BMS DX86-87)
+SimDoNothing 86 -1 -2 0 0x0 -1
+SimDoNothing 87 -1 -2 0 0x0 -1
+
+# BRT up/down (right) (Win DX89-90 = BMS DX88-89)
+SimCBEOSB_BRTUP_R 88 -1 -2 0 0x0 126
+SimCBEOSB_BRTDOWN_R 89 -1 -2 0 0x0 126
+
+# GAIN up/down (right) (Win DX91-92 = BMS DX90-91)
+SimRadarGainUp 90 -1 -2 0 0x0 126
+SimRadarGainDown 91 -1 -2 0 0x0 126

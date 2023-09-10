@@ -1,0 +1,108 @@
+#==================================================================================
+
+#################################################################
+###
+### TM MFD Cougar mappings, left and right MFD.
+###
+### This assumes that you have plugged in your main controller as
+### your 1st (Stick) & 2nd (Throttle) DX device in Windows, and 
+### the MFDs as 3rd (left) and 4th (right) device.
+###
+### Note: This does only provide the UNSHIFTED Layer.
+###
+### The 1st DX device buttons will be 0 to 31,
+### the 2nd DX device buttons will be 32 to 63,
+### the 3rd DX device buttons will be 64 to 91,
+### ...and so on, each DX device starts +32.
+###
+### If you use other devices, simply do the math for moving the
+### button numbers around.
+###
+### For more information how to change DX button assignments
+### please refer to the TECHNICAL MANUAL.pdf, chapter 10 - Key Files
+###
+### located in the ...\Docs\ folder
+###
+#################################################################
+
+SimDoNothing -1 0 0XFFFFFFFF 0 0 0 -2 "========= LEFT MFD UNSHIFTED ========="
+
+# OSBs 1 to 20 (left)
+SimCBEOSB_1L 64 -1 -2 0 0x0 126
+SimCBEOSB_2L 65 -1 -2 0 0x0 126
+SimCBEOSB_3L 66 -1 -2 0 0x0 126
+SimCBEOSB_4L 67 -1 -2 0 0x0 126
+SimCBEOSB_5L 68 -1 -2 0 0x0 126
+SimCBEOSB_6L 69 -1 -2 0 0x0 126
+SimCBEOSB_7L 70 -1 -2 0 0x0 126
+SimCBEOSB_8L 71 -1 -2 0 0x0 126
+SimCBEOSB_9L 72 -1 -2 0 0x0 126
+SimCBEOSB_10L 73 -1 -2 0 0x0 126
+SimCBEOSB_11L 74 -1 -2 0 0x0 126
+SimCBEOSB_12L 75 -1 -2 0 0x0 126
+SimCBEOSB_13L 76 -1 -2 0 0x0 126
+SimCBEOSB_14L 77 -1 -2 0 0x0 126
+SimCBEOSB_15L 78 -1 -2 0 0x0 126
+SimCBEOSB_16L 79 -1 -2 0 0x0 126
+SimCBEOSB_17L 80 -1 -2 0 0x0 126
+SimCBEOSB_18L 81 -1 -2 0 0x0 126
+SimCBEOSB_19L 82 -1 -2 0 0x0 126
+SimCBEOSB_20L 83 -1 -2 0 0x0 126
+
+# SYM up/down (left)
+SimDoNothing 84 -1 -2 0 0x0 -1
+SimDoNothing 85 -1 -2 0 0x0 -1
+
+# CON up/down (left)
+SimDoNothing 86 -1 -2 0 0x0 -1
+SimDoNothing 87 -1 -2 0 0x0 -1
+
+# BRT up/down (left)
+SimCBEOSB_BRTUP_L 88 -1 -2 0 0x0 126
+SimCBEOSB_BRTDOWN_L 89 -1 -2 0 0x0 126
+
+# GAIN up/down (left)
+SimRadarGainUp 90 -1 -2 0 0x0 126
+SimRadarGainDown 91 -1 -2 0 0x0 126
+
+#==================================================================================
+
+SimDoNothing -1 0 0XFFFFFFFF 0 0 0 -2 "========= RIGHT MFD UNSHIFTED ========="
+
+# OSBs 1 to 20 (left)
+SimCBEOSB_1R 96 -1 -2 0 0x0 126
+SimCBEOSB_2R 97 -1 -2 0 0x0 126
+SimCBEOSB_3R 98 -1 -2 0 0x0 126
+SimCBEOSB_4R 99 -1 -2 0 0x0 126
+SimCBEOSB_5R 100 -1 -2 0 0x0 126
+SimCBEOSB_6R 101 -1 -2 0 0x0 126
+SimCBEOSB_7R 102 -1 -2 0 0x0 126
+SimCBEOSB_8R 103 -1 -2 0 0x0 126
+SimCBEOSB_9R 104 -1 -2 0 0x0 126
+SimCBEOSB_10R 105 -1 -2 0 0x0 126
+SimCBEOSB_11R 106 -1 -2 0 0x0 126
+SimCBEOSB_12R 107 -1 -2 0 0x0 126
+SimCBEOSB_13R 108 -1 -2 0 0x0 126
+SimCBEOSB_14R 109 -1 -2 0 0x0 126
+SimCBEOSB_15R 110 -1 -2 0 0x0 126
+SimCBEOSB_16R 111 -1 -2 0 0x0 126
+SimCBEOSB_17R 112 -1 -2 0 0x0 126
+SimCBEOSB_18R 113 -1 -2 0 0x0 126
+SimCBEOSB_19R 114 -1 -2 0 0x0 126
+SimCBEOSB_20R 115 -1 -2 0 0x0 126
+
+# SYM up/down (left)
+SimDoNothing 116 -1 -2 0 0x0 -1
+SimDoNothing 117 -1 -2 0 0x0 -1
+
+# CON up/down (left)
+SimDoNothing 118 -1 -2 0 0x0 -1
+SimDoNothing 119 -1 -2 0 0x0 -1
+
+# BRT up/down (left)
+SimCBEOSB_BRTUP_R 120 -1 -2 0 0x0 126
+SimCBEOSB_BRTDOWN_R 121 -1 -2 0 0x0 126
+
+# GAIN up/down (left)
+SimRadarGainUp 122 -1 -2 0 0x0 126
+SimRadarGainDown 123 -1 -2 0 0x0 126
