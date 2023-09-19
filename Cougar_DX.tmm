@@ -8,21 +8,91 @@ Wheelbrakes = k
 
 Rem # Trent customizations.
 
+Rem ---------------------------------------------------------------------------
+Rem Stick
+Rem ---------------------------------------------------------------------------
+
 Stick_FirstTriggerDetent = CTL /
 Stick_SecondTriggerDetent = ALT /
+Stick_Pickle = SPC
+Stick_NWSARDiscMslStepSwitch = SHF /
+Stick_Pinky = v
+Stick_Paddle = ALT a
 
+Stick_TrimUp = CTL UARROW
+Stick_TrimDown = CTL DARROW
+Stick_TrimLeft = CTL LARROW
+Stick_TrimRight = CTL RARROW
+
+Stick_TMSUp = SHF HOME
+Stick_TMSDown = SHF END
+Stick_TMSLeft = SHF DEL
+Stick_TMSRight = SHF PGDN
+
+Stick_DMSUp = CTL HOME
+Stick_DMSDown = CTL END
+Stick_DMSLeft = CTL DEL
+Stick_DMSRight = CTL PGDN
+
+Stick_CMSUp = ALT HOME
+Stick_CMSDown = ALT END
+Stick_CMSLeft = ALT DEL
+Stick_CMSRight = ALT PGDN
+
+TQS_DogfightOverride = d
+TQS_MRMOverride = m
+TQS_MRMDFCancel = c
 TQS_ToggleSpeedBrake = b
 TQS_OpenSpeedBrake = SHF b
+TQS_ToggleMissleCage = u
+TQS_CursorEnable = INS
+TQS_CursorZero = PGUP
 
+TQS_CommsUp = HOME
+TQS_CommsDown = END
+TQS_CommsLeft = DEL
+TQS_CommsRight = PGDN
+
+TrackIR_Center = F12
+TrackIR_Freeze = F9
+
+ResetMasterCaution = ENT
+
+Rem ---------------------------------------------------------------------------
+Rem MFDs
+Rem ---------------------------------------------------------------------------
+LMFD_OSB1 = CTL ALT 1
+LMFD_OSB2 = CTL ALT 2
+LMFD_OSB3 = CTL ALT 3
+LMFD_OSB4 = CTL ALT 4
+
+Rem ---------------------------------------------------------------------------
+Rem Cockpit
+Rem ---------------------------------------------------------------------------
+Cockpit_TrimReset = ALT F1
+
+Rem ---------------------------------------------------------------------------
+Rem View Internal
+Rem ---------------------------------------------------------------------------
+ViewInt_ToggleSABar = SHF 3
+ViewInt_PadlockNext = =
+ViewInt_PadlockPrev = -
+
+Rem ---------------------------------------------------------------------------
+Rem AWACS/Wingman
+Rem ---------------------------------------------------------------------------
+AWACS_RequestPicture = <q DLY(60) 1>
 AWACS_Declare = <q DLY(60) 2>
-AWACS_NearestThreat = <q DLY(60) q DLY(60) 1>
-AWACS_Picture = <q DLY(60) 1>
-AWACS_VectorHome = <q DLY(60) q DLY(60) 5>
-AWACS_VectorAlternate = <q DLY(60) q DLY(60) 6>
+AWACS_RequestHelp = <q DLY(60) 3>
+AWACS_VectorToNearestAirThreat = <q DLY(60) q DLY(60) 1>
+AWACS_VectorToTarget = <q DLY(60) q DLY(60) 2>
+AWACS_VectorToHomePlate = <q DLY(60) q DLY(60) 7>
+AWACS_VectorToDivertField = <q DLY(60) q DLY(60) 6>
 
-Wingman_WeaponsFree = <w DLY(60) 4>
-Wingman_WeaponsHold = <w DLY(60) 5>
-Wingman_AttackMyTarget = <w DLY(60) 8>
+Wingman_AttackMyTarget = <w DLY(60) 1>
+Wingman_WeaponsFreeAA = <w DLY(60) 4>
+Wingman_WeaponsHold = <w DLY(60) 6>
+Wingman_DatalinkGroundTarget = <w DLY(60) w DLY(60) 5>
 Wingman_RTB = <w DLY(60) w DLY(60) w DLY(60) 2>
 
 Shortcut_NextWaypoint = x
