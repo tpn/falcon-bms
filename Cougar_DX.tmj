@@ -14,39 +14,39 @@ Rem ---------------------------------------------------------------------------
 Rem Stick
 Rem ---------------------------------------------------------------------------
 
-BTN TG2 /A Stick_SecondTriggerDetent
+BTN TG2 /H Stick_SecondTriggerDetent
 
 BTN H2U /I    Wingman_AttackMyTarget
-        /O /A Stick_TMSUp
+        /O /H Stick_TMSUp
 BTN H2D /I    Wingman_DatalinkGroundTarget
-        /O /A Stick_TMSDown
+        /O /H Stick_TMSDown
 BTN H2L /I    ViewInt_PadlockPrev
-        /O /A Stick_TMSLeft
+        /O /H Stick_TMSLeft
 BTN H2R /I    ViewInt_PadlockNext
-        /O /A Stick_TMSRight
+        /O /H Stick_TMSRight
 
 BTN H3U /I    ViewInt_RecenterVR
-        /O /A Stick_DMSUp
+        /O /H Stick_DMSUp
 BTN H3D /I    Cockpit_TrimReset
-        /O /A Stick_DMSDown
+        /O /H Stick_DMSDown
 BTN H3L /I    Shortcut_PrevWaypoint
-        /O /A Stick_DMSLeft
+        /O /H Stick_DMSLeft
 BTN H3R /I    Shortcut_NextWaypoint
-        /O /A Stick_DMSRight
+        /O /H Stick_DMSRight
 
 BTN H4U /I    TrackIR_Freeze
-        /O /A Stick_CMSUp
+        /O /H Stick_CMSUp
 BTN H4D /I    TrackIR_Center
-        /O /A Stick_CMSDown
+        /O /H Stick_CMSDown
 BTN H4L /I    ResetMasterCaution
-        /O /A Stick_CMSLeft
+        /O /H Stick_CMSLeft
 BTN H4R /I    TrackIR_Freeze
-        /O /A Stick_CMSRight
+        /O /H Stick_CMSRight
 
-BTN S2 /I ^
-       /O /A Stick_Pickle
+BTN S2 /I /H ^
+       /O /H Stick_Pickle
 
-BTN S4 /P Stick_Paddle /R ^
+BTN S4 /H Stick_Paddle
 
 BTN S1 /U Stick_NWSARDiscMslStepSwitch
        /M Stick_NWSARDiscMslStepSwitch
@@ -68,31 +68,31 @@ BTN T6 /I Stick_Pinky
 BTN T1 /I TQS_CursorZero
        /O TQS_CursorEnable
 
-BTN T2 /I       AutopilotToggle
-       /O /P /A TQS_CommsUp /R ^
+BTN T2 /I    AutopilotToggle
+       /O /H TQS_CommsUp
 
-BTN T3 /I       Shortcut_NextAGWeapon
-       /O /P /A TQS_CommsDown /R ^
+BTN T3 /I    Shortcut_NextAGWeapon
+       /O /H TQS_CommsDown
 
-BTN T4 /I       AWACS_RequestPicture
-       /O /P /A TQS_CommsRight /R ^
+BTN T4 /I    AWACS_RequestPicture
+       /O /H TQS_CommsRight
 
-BTN T5 /I       AutopilotSteeringToggle
-       /O /P /A TQS_CommsLeft /R ^
+BTN T5 /I    AutopilotSteeringToggle
+       /O /H TQS_CommsLeft
 
 Rem ---------------------------------------------------------------------------
 Rem Wingman, AWACS
 Rem ---------------------------------------------------------------------------
 
-BTN H1U /I /H Wingman_AttackMyTarget
+BTN H1U /I    Wingman_AttackMyTarget
         /O    AWACS_VectorToDivertField
 
-BTN H1D /I /H Wingman_RTB
+BTN H1D /I    Wingman_RTB
         /O    AWACS_VectorToHomePlate
 
-BTN H1L /I /H     AWACS_VectorToNearestAirThreat
-        /O /P /A  Stick_TrimLeft /R ^
+BTN H1L /I    AWACS_VectorToNearestAirThreat
+        /O /A Stick_TrimLeft
 
-BTN H1R /I /H     AWACS_Declare
-        /O /P /A  Stick_TrimRight /R ^
+BTN H1R /I    AWACS_Declare
+        /O /A Stick_TrimRight
 
