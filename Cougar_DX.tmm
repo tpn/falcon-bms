@@ -58,6 +58,9 @@ TrackIR_Freeze = F9
 
 ResetMasterCaution = ENT
 
+AutopilotToggle = a
+AutopilotSteeringToggle = SHF a
+
 Rem ---------------------------------------------------------------------------
 Rem MFDs
 Rem ---------------------------------------------------------------------------
@@ -77,6 +80,7 @@ Rem ---------------------------------------------------------------------------
 ViewInt_ToggleSABar = SHF 3
 ViewInt_PadlockNext = =
 ViewInt_PadlockPrev = -
+ViewInt_RecenterVR = CTL v
 
 Rem ---------------------------------------------------------------------------
 Rem AWACS/Wingman
