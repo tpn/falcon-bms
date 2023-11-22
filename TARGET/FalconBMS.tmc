@@ -1,0 +1,317 @@
+include "target.tmh"
+
+define ALL_LAYERS 0x7fffffff
+
+define USB_A USB[0x04]
+define USB_B USB[0x05]
+define USB_C USB[0x06]
+define USB_D USB[0x07]
+define USB_E USB[0x08]
+define USB_F USB[0x09]
+define USB_G USB[0x0A]
+define USB_H USB[0x0B]
+define USB_I USB[0x0C]
+define USB_J USB[0x0D]
+define USB_K USB[0x0E]
+define USB_L USB[0x0F]
+define USB_M USB[0x10]
+define USB_N USB[0x11]
+define USB_O USB[0x12]
+define USB_P USB[0x13]
+define USB_Q USB[0x14]
+define USB_R USB[0x15]
+define USB_S USB[0x16]
+define USB_T USB[0x17]
+define USB_U USB[0x18]
+define USB_V USB[0x19]
+define USB_W USB[0x1A]
+define USB_X USB[0x1B]
+define USB_Y USB[0x1C]
+define USB_Z USB[0x1D]
+define USB_1 USB[0x1E]
+define USB_2 USB[0x1F]
+define USB_3 USB[0x20]
+define USB_4 USB[0x21]
+define USB_5 USB[0x22]
+define USB_6 USB[0x23]
+define USB_7 USB[0x24]
+define USB_8 USB[0x25]
+define USB_9 USB[0x26]
+define USB_0 USB[0x27]
+define USB_RETURN USB[0x28]
+define USB_ESCAPE USB[0x29]
+define USB_BACKSPACE USB[0x2A]
+define USB_TAB USB[0x2B]
+define USB_SPACE USB[0x2C]
+define USB_MINUS USB[0x2D]
+define USB_EQUALS USB[0x2E]
+define USB_LBRACKET USB[0x2F]
+define USB_RBRACKET USB[0x30]
+define USB_BACKSLASH USB[0x31]
+define USB_SEMICOLON USB[0x33]
+define USB_APOSTROPHE USB[0x34]
+define USB_COMMA USB[0x36]
+define USB_GRAVE USB[0x35]
+define USB_PERIOD USB[0x37]
+define USB_SLASH USB[0x38]
+define USB_CAPSLOCK USB[0x39]
+define USB_F1 USB[0x3A]
+define USB_F2 USB[0x3B]
+define USB_F3 USB[0x3C]
+define USB_F4 USB[0x3D]
+define USB_F5 USB[0x3E]
+define USB_F6 USB[0x3F]
+define USB_F7 USB[0x40]
+define USB_F8 USB[0x41]
+define USB_F9 USB[0x42]
+define USB_F10 USB[0x43]
+define USB_F11 USB[0x44]
+define USB_F12 USB[0x45]
+define USB_PRINTSCREEN USB[0x46]
+define USB_SCROLLLOCK USB[0x47]
+define USB_PAUSE USB[0x48]
+define USB_INSERT USB[0x49]
+define USB_HOME USB[0x4A]
+define USB_PAGEUP USB[0x4B]
+define USB_DELETE USB[0x4C]
+define USB_END USB[0x4D]
+define USB_PAGEDOWN USB[0x4E]
+define USB_RIGHT USB[0x4F]
+define USB_LEFT USB[0x50]
+define USB_DOWN USB[0x51]
+define USB_UP USB[0x52]
+define USB_NUMLOCK USB[0x53]
+define USB_KP_DIVIDE USB[0x54]
+define USB_KP_MULTIPLY USB[0x55]
+define USB_KP_MINUS USB[0x56]
+define USB_KP_PLUS USB[0x57]
+define USB_KP_ENTER USB[0x58]
+define USB_KP_EQUALS USB[0x67]
+define USB_KP_DOT USB[0x63]
+define USB_KP_1 USB[0x59]
+define USB_KP_2 USB[0x5A]
+define USB_KP_3 USB[0x5B]
+define USB_KP_4 USB[0x5C]
+define USB_KP_5 USB[0x5D]
+define USB_KP_6 USB[0x5E]
+define USB_KP_7 USB[0x5F]
+define USB_KP_8 USB[0x60]
+define USB_KP_9 USB[0x61]
+define USB_KP_0 USB[0x62]
+
+define LMFD_OSB01 PULSE+L_CTL+L_ALT+USB_1
+define LMFD_OSB02 PULSE+L_CTL+L_ALT+USB_2
+define LMFD_OSB03 PULSE+L_CTL+L_ALT+USB_3
+define LMFD_OSB04 PULSE+L_CTL+L_ALT+USB_4
+define LMFD_OSB05 PULSE+L_CTL+L_ALT+USB_5
+define LMFD_OSB06 PULSE+L_CTL+L_ALT+USB_6
+define LMFD_OSB07 PULSE+L_CTL+L_ALT+USB_7
+define LMFD_OSB08 PULSE+L_CTL+L_ALT+USB_8
+define LMFD_OSB09 PULSE+L_CTL+L_ALT+USB_9
+define LMFD_OSB10 PULSE+L_CTL+L_ALT+USB_0
+define LMFD_OSB11 PULSE+L_CTL+L_ALT+USB_KP_1
+define LMFD_OSB12 PULSE+L_CTL+L_ALT+USB_KP_2
+define LMFD_OSB13 PULSE+L_CTL+L_ALT+USB_KP_3
+define LMFD_OSB14 PULSE+L_CTL+L_ALT+USB_KP_4
+define LMFD_OSB15 PULSE+L_CTL+L_ALT+USB_KP_5
+define LMFD_OSB16 PULSE+L_CTL+L_ALT+USB_KP_6
+define LMFD_OSB17 PULSE+L_CTL+L_ALT+USB_KP_7
+define LMFD_OSB18 PULSE+L_CTL+L_ALT+USB_KP_8
+define LMFD_OSB19 PULSE+L_CTL+L_ALT+USB_KP_9
+define LMFD_OSB20 PULSE+L_CTL+L_ALT+USB_KP_0
+define LMFD_BRT_INC PULSE+L_CTL+L_ALT+USB_EQUALS
+define LMFD_BRT_DEC PULSE+L_CTL+L_ALT+USB_MINUS
+define LMFD_GAIN_INC PULSE+L_ALT+L_SHIFT+USB_GRAVE
+define LMFD_GAIN_DEC PULSE+L_CTL+L_ALT+USB_GRAVE
+
+define RMFD_OSB01 PULSE+L_ALT+L_SHIFT+USB_1
+define RMFD_OSB02 PULSE+L_ALT+L_SHIFT+USB_2
+define RMFD_OSB03 PULSE+L_ALT+L_SHIFT+USB_3
+define RMFD_OSB04 PULSE+L_ALT+L_SHIFT+USB_4
+define RMFD_OSB05 PULSE+L_ALT+L_SHIFT+USB_5
+define RMFD_OSB06 PULSE+L_ALT+L_SHIFT+USB_6
+define RMFD_OSB07 PULSE+L_ALT+L_SHIFT+USB_7
+define RMFD_OSB08 PULSE+L_ALT+L_SHIFT+USB_8
+define RMFD_OSB09 PULSE+L_ALT+L_SHIFT+USB_9
+define RMFD_OSB10 PULSE+L_ALT+L_SHIFT+USB_0
+define RMFD_OSB11 PULSE+L_ALT+L_SHIFT+USB_KP_1
+define RMFD_OSB12 PULSE+L_ALT+L_SHIFT+USB_KP_2
+define RMFD_OSB13 PULSE+L_ALT+L_SHIFT+USB_KP_3
+define RMFD_OSB14 PULSE+L_ALT+L_SHIFT+USB_KP_4
+define RMFD_OSB15 PULSE+L_ALT+L_SHIFT+USB_KP_5
+define RMFD_OSB16 PULSE+L_ALT+L_SHIFT+USB_KP_6
+define RMFD_OSB17 PULSE+L_ALT+L_SHIFT+USB_KP_7
+define RMFD_OSB18 PULSE+L_ALT+L_SHIFT+USB_KP_8
+define RMFD_OSB19 PULSE+L_ALT+L_SHIFT+USB_KP_9
+define RMFD_OSB20 PULSE+L_ALT+L_SHIFT+USB_KP_0
+define RMFD_BRT_INC PULSE+L_ALT+L_SHIFT+USB_EQUALS
+define RMFD_BRT_DEC PULSE+L_ALT+L_SHIFT+USB_MINUS
+
+int InitLeftMFD()
+{
+    //
+    // Left MFD
+    //
+
+    MapKey(&LMFD, OSB01, LMFD_OSB01, ALL_LAYERS);
+    MapKey(&LMFD, OSB02, LMFD_OSB02, ALL_LAYERS);
+    MapKey(&LMFD, OSB03, LMFD_OSB03, ALL_LAYERS);
+    MapKey(&LMFD, OSB04, LMFD_OSB04, ALL_LAYERS);
+    MapKey(&LMFD, OSB05, LMFD_OSB05, ALL_LAYERS);
+    MapKey(&LMFD, OSB06, LMFD_OSB06, ALL_LAYERS);
+    MapKey(&LMFD, OSB07, LMFD_OSB07, ALL_LAYERS);
+    MapKey(&LMFD, OSB08, LMFD_OSB08, ALL_LAYERS);
+    MapKey(&LMFD, OSB09, LMFD_OSB09, ALL_LAYERS);
+    MapKey(&LMFD, OSB10, LMFD_OSB10, ALL_LAYERS);
+    MapKey(&LMFD, OSB11, LMFD_OSB11, ALL_LAYERS);
+    MapKey(&LMFD, OSB12, LMFD_OSB12, ALL_LAYERS);
+    MapKey(&LMFD, OSB13, LMFD_OSB13, ALL_LAYERS);
+    MapKey(&LMFD, OSB14, LMFD_OSB14, ALL_LAYERS);
+    MapKey(&LMFD, OSB15, LMFD_OSB15, ALL_LAYERS);
+    MapKey(&LMFD, OSB16, LMFD_OSB16, ALL_LAYERS);
+    MapKey(&LMFD, OSB17, LMFD_OSB17, ALL_LAYERS);
+    MapKey(&LMFD, OSB18, LMFD_OSB18, ALL_LAYERS);
+    MapKey(&LMFD, OSB19, LMFD_OSB19, ALL_LAYERS);
+    MapKey(&LMFD, OSB20, LMFD_OSB20, ALL_LAYERS);
+    MapKey(&LMFD, BRTU, LMFD_BRT_INC, ALL_LAYERS);
+    MapKey(&LMFD, BRTD, LMFD_BRT_DEC, ALL_LAYERS);
+    MapKey(&LMFD, GAINU, LMFD_GAIN_INC, ALL_LAYERS);
+    MapKey(&LMFD, GAIND, LMFD_GAIN_DEC, ALL_LAYERS);
+
+    // Unused buttons.
+    // MapKey(&LMFD, SYMU, LMFD_SYM_INC, ALL_LAYERS);
+    // MapKey(&LMFD, SYMD, LMFD_SYM_DEC, ALL_LAYERS);
+    // MapKey(&LMFD, CONU, LMFD_CON_INC, ALL_LAYERS);
+    // MapKey(&LMFD, COND, LMFD_CON_DEC, ALL_LAYERS);
+
+    return 0;
+}
+
+int InitRightMFD()
+{
+    //
+    // Right MFD
+    //
+
+    MapKey(&RMFD, OSB01, RMFD_OSB01, ALL_LAYERS);
+    MapKey(&RMFD, OSB02, RMFD_OSB02, ALL_LAYERS);
+    MapKey(&RMFD, OSB03, RMFD_OSB03, ALL_LAYERS);
+    MapKey(&RMFD, OSB04, RMFD_OSB04, ALL_LAYERS);
+    MapKey(&RMFD, OSB05, RMFD_OSB05, ALL_LAYERS);
+    MapKey(&RMFD, OSB06, RMFD_OSB06, ALL_LAYERS);
+    MapKey(&RMFD, OSB07, RMFD_OSB07, ALL_LAYERS);
+    MapKey(&RMFD, OSB08, RMFD_OSB08, ALL_LAYERS);
+    MapKey(&RMFD, OSB09, RMFD_OSB09, ALL_LAYERS);
+    MapKey(&RMFD, OSB10, RMFD_OSB10, ALL_LAYERS);
+    MapKey(&RMFD, OSB11, RMFD_OSB11, ALL_LAYERS);
+    MapKey(&RMFD, OSB12, RMFD_OSB12, ALL_LAYERS);
+    MapKey(&RMFD, OSB13, RMFD_OSB13, ALL_LAYERS);
+    MapKey(&RMFD, OSB14, RMFD_OSB14, ALL_LAYERS);
+    MapKey(&RMFD, OSB15, RMFD_OSB15, ALL_LAYERS);
+    MapKey(&RMFD, OSB16, RMFD_OSB16, ALL_LAYERS);
+    MapKey(&RMFD, OSB17, RMFD_OSB17, ALL_LAYERS);
+    MapKey(&RMFD, OSB18, RMFD_OSB18, ALL_LAYERS);
+    MapKey(&RMFD, OSB19, RMFD_OSB19, ALL_LAYERS);
+    MapKey(&RMFD, OSB20, RMFD_OSB20, ALL_LAYERS);
+    MapKey(&RMFD, BRTU, RMFD_BRT_INC, ALL_LAYERS);
+    MapKey(&RMFD, BRTD, RMFD_BRT_DEC, ALL_LAYERS);
+
+    // Unused buttons.
+    // MapKey(&RMFD, GAINU, RMFD_GAIN_INC, ALL_LAYERS);
+    // MapKey(&RMFD, GAIND, RMFD_GAIN_DEC, ALL_LAYERS);
+    // MapKey(&RMFD, SYMU, RMFD_SYM_INC, ALL_LAYERS);
+    // MapKey(&RMFD, SYMD, RMFD_SYM_DEC, ALL_LAYERS);
+    // MapKey(&RMFD, CONU, RMFD_CON_INC, ALL_LAYERS);
+    // MapKey(&RMFD, COND, RMFD_CON_DEC, ALL_LAYERS);
+
+    return 0;
+}
+
+int InitViperTQS()
+{
+    //
+    // Viper TQS
+    //
+
+    MapAxis(&ViperTQS, VQ1_AXIS, DX_XROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+    SetSCurve(&ViperTQS, VQ1_AXIS, 0, 0, 0, 0, 0);
+
+    MapAxis(&ViperTQS, VQ2_AXIS, DX_YROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+    SetSCurve(&ViperTQS, VQ2_AXIS, 0, 0, 0, 0, 0);
+
+    MapAxis(&ViperTQS, VQ3_AXIS, DX_X_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+    SetSCurve(&ViperTQS, VQ3_AXIS, 0, 0, 0, 0, 0);
+
+    MapAxis(&ViperTQS, VQ4_AXIS, DX_Y_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+    SetSCurve(&ViperTQS, VQ4_AXIS, 0, 0, 0, 0, 0);
+
+    MapAxis(&ViperTQS, VQ5_AXIS, DX_Z_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+    SetSCurve(&ViperTQS, VQ5_AXIS, 0, 0, 0, 0, 0);
+
+    MapAxis(&ViperTQS, VB1_AXIS, DX_ZROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+    SetSCurve(&ViperTQS, VB1_AXIS, 0, 0, 0, 0, 0);
+
+    return 0;
+}
+
+define STICK_PICKLE S2
+
+int InitJoystick()
+{
+    //
+    // Joystick
+    //
+
+    MapAxis(&Joystick, JOYY, DX_Y_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+    SetSCurve(&Joystick, JOYY, 0, 0, 0, 0, 0);
+
+    MapAxis(&Joystick, JOYX, DX_X_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+    SetSCurve(&Joystick, JOYX, 0, 0, 0, 0, 0);
+
+    MapKey(&Joystick, STICK_PICKLE, USB_SPACE, ALL_LAYERS);
+
+    return 0;
+}
+
+int main()
+{
+    Configure(&HCougar, MODE_EXCLUDED);
+    Configure(&JoystickF18, MODE_EXCLUDED);
+    Configure(&Throttle, MODE_EXCLUDED);
+    Configure(&A320Pilot, MODE_EXCLUDED);
+    Configure(&A320Copilot, MODE_EXCLUDED);
+    Configure(&TCAQuadrant12, MODE_EXCLUDED);
+    Configure(&TCAQuadrant34, MODE_EXCLUDED);
+    Configure(&TCAYokeBoeing, MODE_EXCLUDED);
+    Configure(&TCAQBoeing12, MODE_EXCLUDED);
+    Configure(&TCAQBoeing34, MODE_EXCLUDED);
+    Configure(&TCASidestickXPilot, MODE_EXCLUDED);
+    Configure(&TCASidestickXCopilot, MODE_EXCLUDED);
+    Configure(&ViperBBox, MODE_EXCLUDED);
+    Configure(&T16000, MODE_EXCLUDED);
+    Configure(&T16000L, MODE_EXCLUDED);
+    Configure(&TFRPRudder, MODE_EXCLUDED);
+    Configure(&TWCSThrottle, MODE_EXCLUDED);
+    Configure(&TFRPHARudder, MODE_EXCLUDED);
+
+    if (Init(&EventHandle)) {
+        return 1;
+    }
+
+    SetKBRate(32, 50);
+    SetKBLayout(KB_ENG);
+    SetShiftButton(0, 0, 0, 0, 0, 0);
+
+    InitLeftMFD();
+    InitRightMFD();
+    InitViperTQS();
+    InitJoystick();
+
+}
+
+int EventHandle(int type, alias o, int x)
+{
+    DefaultMapping(&o, x);
+}
+
+// vim:set ts=8 sw=4 sts=4 tw=80 expandtab syntax=c                            :

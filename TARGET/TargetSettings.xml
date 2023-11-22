@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TargetSettings>
+  <ScriptSettings>
+    <ScriptTimeout>60000</ScriptTimeout>
+  </ScriptSettings>
+  <FileLocationSettings>
+    <ConfigFileLocation>C:\</ConfigFileLocation>
+    <GameFileLocation>C:\</GameFileLocation>
+  </FileLocationSettings>
+  <ConfigFilesList>
+    <ConfigFilesLimit>50</ConfigFilesLimit>
+    <FilesNumber>0</FilesNumber>
+  </ConfigFilesList>
+</TargetSettings>
