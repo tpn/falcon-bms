@@ -1,0 +1,59 @@
+include "target.tmh"
+int main()
+{
+	Configure(&Joystick, MODE_EXCLUDED);
+	Configure(&JoystickF18, MODE_EXCLUDED);
+	Configure(&Throttle, MODE_EXCLUDED);
+	Configure(&A320Pilot, MODE_EXCLUDED);
+	Configure(&A320Copilot, MODE_EXCLUDED);
+	Configure(&TCAQuadrant12, MODE_EXCLUDED);
+	Configure(&TCAQuadrant34, MODE_EXCLUDED);
+	Configure(&TCAYokeBoeing, MODE_EXCLUDED);
+	Configure(&TCAQBoeing12, MODE_EXCLUDED);
+	Configure(&TCAQBoeing34, MODE_EXCLUDED);
+	Configure(&TCASidestickXPilot, MODE_EXCLUDED);
+	Configure(&TCASidestickXCopilot, MODE_EXCLUDED);
+	Configure(&ViperBBox, MODE_EXCLUDED);
+	Configure(&T16000, MODE_EXCLUDED);
+	Configure(&T16000L, MODE_EXCLUDED);
+	Configure(&TFRPRudder, MODE_EXCLUDED);
+	Configure(&TWCSThrottle, MODE_EXCLUDED);
+	Configure(&TFRPHARudder, MODE_EXCLUDED);
+	if(Init(&EventHandle)) return 1;
+	SetKBRate(32, 50);
+	SetKBLayout(KB_ENG);
+	SetShiftButton(0, 0, 0, 0, 0, 0);
+	MapAxis(&HCougar, JOYX, DX_X_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&HCougar, JOYX, 0, 0, 0, 0, 0);
+	MapAxis(&HCougar, JOYY, DX_Y_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&HCougar, JOYY, 0, 0, 0, 0, 0);
+	MapAxis(&HCougar, RUDDER, 0, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&HCougar, RUDDER, 0, 0, 0, 0, 0);
+	MapAxis(&HCougar, THROTTLE, 0, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&HCougar, THROTTLE, 0, 0, 0, 0, 0);
+	MapAxis(&HCougar, ANT_ELEV, 0, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&HCougar, ANT_ELEV, 0, 0, 0, 0, 0);
+	MapAxis(&HCougar, MAN_RNG, 0, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&HCougar, MAN_RNG, 0, 0, 0, 0, 0);
+	MapAxis(&HCougar, RDR_X, 0, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&HCougar, RDR_X, 0, 0, 0, 0, 0);
+	MapAxis(&HCougar, RDR_Y, 0, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&HCougar, RDR_Y, 0, 0, 0, 0, 0);
+	MapAxis(&ViperTQS, VQ1_AXIS, DX_XROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&ViperTQS, VQ1_AXIS, 0, 0, 0, 0, 0);
+	MapAxis(&ViperTQS, VQ2_AXIS, DX_YROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&ViperTQS, VQ2_AXIS, 0, 0, 0, 0, 0);
+	MapAxis(&ViperTQS, VQ3_AXIS, DX_X_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&ViperTQS, VQ3_AXIS, 0, 0, 0, 0, 0);
+	MapAxis(&ViperTQS, VQ4_AXIS, DX_Y_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&ViperTQS, VQ4_AXIS, 0, 0, 0, 0, 0);
+	MapAxis(&ViperTQS, VQ5_AXIS, DX_Z_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&ViperTQS, VQ5_AXIS, 0, 0, 0, 0, 0);
+	MapAxis(&ViperTQS, VB1_AXIS, DX_ZROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+	SetSCurve(&ViperTQS, VB1_AXIS, 0, 0, 0, 0, 0);
+
+}
+int EventHandle(int type, alias o, int x)
+{
+	DefaultMapping(&o, x);
+}

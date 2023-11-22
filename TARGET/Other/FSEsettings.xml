@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FastEditorData>
+  <RecentFiles>
+    <FilesLimit>5</FilesLimit>
+    <Files>
+      <File00>C:\src\falcon-bms\FalconBMS.tmc</File00>
+      <File01>C:\Users\Trent\OneDrive\Config\HOTAS\TARGET\Falcon BMS 4.35 Macro.ttm</File01>
+      <File02>C:\Users\Trent\OneDrive\Config\HOTAS\TARGET\Falcon BMS 4.35 Header.tmh</File02>
+      <File03>C:\Users\Trent\OneDrive\Config\HOTAS\TARGET\Falcon BMS 4.35.tmc</File03>
+    </Files>
+  </RecentFiles>
+  <Options>
+    <FolderPaths>
+      <Path00>{current}</Path00>
+      <Path01>C:\Program Files (x86)\Thrustmaster\TARGET\Scripts</Path01>
+      <Path02>C:\Users\Trent\OneDrive\Config\HOTAS\TARGET</Path02>
+    </FolderPaths>
+    <Files>
+      <AddIncludes>1</AddIncludes>
+    </Files>
+    <HotKey>
+      <Enabled>0</Enabled>
+      <KeyCombination>Ctrl+Alt+Pause</KeyCombination>
+    </HotKey>
+    <Script>
+      <RunAfterExit>0</RunAfterExit>
+      <RunTimeout>60000</RunTimeout>
+    </Script>
+    <Editor>
+      <ShowAutoComplete>1</ShowAutoComplete>
+      <LoadLastFile>0</LoadLastFile>
+      <ShowLineNumbers>0</ShowLineNumbers>
+      <ShowEndOfLine>0</ShowEndOfLine>
+      <ShowSpaces>0</ShowSpaces>
+      <ShowTabs>0</ShowTabs>
+      <ConvertTabs>1</ConvertTabs>
+      <WrapText>0</WrapText>
+      <TabSize>4</TabSize>
+      <FontSize>12</FontSize>
+      <BackgroundImage>C:\Program Files (x86)\Thrustmaster\TARGET\bg_main.png</BackgroundImage>
+      <Colors>
+        <Keywords>#FF1E90FF</Keywords>
+        <BlockComment>#FF32CD32</BlockComment>
+        <LineComment>#FF32CD32</LineComment>
+        <String>#FFA52A2A</String>
+        <Char>#FFA52A2A</Char>
+        <Digits>#FFFFFFFF</Digits>
+        <Text>#FFFFFFFF</Text>
+      </Colors>
+    </Editor>
+  </Options>
+  <Sizes>
+    <Frames>
+      <FileListWidth>150</FileListWidth>
+      <OutputHeight>100</OutputHeight>
+    </Frames>
+    <Window>
+      <IsMaximized>1</IsMaximized>
+      <Width>640</Width>
+      <Height>480</Height>
+    </Window>
+  </Sizes>
+</FastEditorData>
