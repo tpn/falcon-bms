@@ -165,4 +165,20 @@ define TQS_STORES_CONFIG_CAT3 QB_BTN38
 
 define TQS_AXIS VB_AXIS
 
+//
+// Helpers
+//
+
+define NextWaypoint 'x'
+define PrevWaypoint 'z'
+
+define FreezeTrackIR F9
+define RecenterTrackIR F12
+
+define ResetMasterCaution KPENT
+
+//define AWACSDeclare CHAIN(LOCK+PULSE+'q', D(), PULSE+'2', LOCK)
+//define WingmanAttackMyTarget CHAIN(LOCK+PULSE+'w', D(), PULSE+'1', LOCK)
+
+
 // vim:set ts=8 sw=4 sts=4 tw=80 expandtab syntax=c                            :

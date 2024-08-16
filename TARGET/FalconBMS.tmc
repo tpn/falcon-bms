@@ -88,27 +88,136 @@ int InitViperTQS()
     // Viper TQS
     //
 
+    // Available axes:
+    //  DX_Z_AXIS
+
+    // Antenna
     MapAxis(&ViperTQS, VQ1_AXIS, DX_XROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
     SetSCurve(&ViperTQS, VQ1_AXIS, 0, 0, 0, 0, 0);
 
+    // Range
     MapAxis(&ViperTQS, VQ2_AXIS, DX_YROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
     SetSCurve(&ViperTQS, VQ2_AXIS, 0, 0, 0, 0, 0);
 
-    MapAxis(&ViperTQS, VQ3_AXIS, DX_X_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+    // Cursor X
+    MapAxis(&ViperTQS, VQ3_AXIS, DX_Z_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
     SetSCurve(&ViperTQS, VQ3_AXIS, 0, 0, 0, 0, 0);
 
-    MapAxis(&ViperTQS, VQ4_AXIS, DX_Y_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+    // Cursor Y
+    MapAxis(&ViperTQS, VQ4_AXIS, DX_ZROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
     SetSCurve(&ViperTQS, VQ4_AXIS, 0, 0, 0, 0, 0);
 
-    MapAxis(&ViperTQS, VQ5_AXIS, DX_Z_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+    // Throttle
+    MapAxis(&ViperTQS, VQ5_AXIS, DX_THROTTLE_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
     SetSCurve(&ViperTQS, VQ5_AXIS, 0, 0, 0, 0, 0);
 
-    MapAxis(&ViperTQS, VB1_AXIS, DX_ZROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
+    // Slider
+    MapAxis(&ViperTQS, VB1_AXIS, DX_SLIDER_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
     SetSCurve(&ViperTQS, VB1_AXIS, 0, 0, 0, 0, 0);
 
-    MapKey(&ViperTQS, TQS_EMERG_JETTISON, EMERG_JETTISON, ALL_LAYERS);
-    MapKey(&ViperTQS, TQS_GEAR_UP, GEAR_UP, ALL_LAYERS);
-    MapKey(&ViperTQS, TQS_GEAR_DOWN, GEAR_DOWN, ALL_LAYERS);
+//    MapKey(&ViperTQS, TQS_EMERG_JETTISON, EMERG_JETTISON, ALL_LAYERS);
+//    MapKey(&ViperTQS, TQS_GEAR_UP, GEAR_UP, ALL_LAYERS);
+//    MapKey(&ViperTQS, TQS_GEAR_DOWN, GEAR_DOWN, ALL_LAYERS);
+
+/*
+    MapKey(&ViperTQS, Q_BTN18, DX1, ALL_LAYERS);
+    MapKey(&ViperTQS, Q_BTN19, DX2, ALL_LAYERS);
+    MapKey(&ViperTQS, Q_BTN20, DX3, ALL_LAYERS);
+    MapKey(&ViperTQS, Q_BTN21, DX4, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN1, DX5, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN2, DX6, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN3, DX7, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN4, DX8, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN5, DX9, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN6, DX10, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN7, DX11, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN8, DX12, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN9, DX13, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN10, DX14, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN11, DX15, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN12, DX16, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN13, DX17, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN14, DX18, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN15, DX19, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN16, DX20, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN17, DX21, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN18, DX22, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN19, DX23, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN20, DX24, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN21, DX25, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN22, DX26, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN23, DX27, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN24, DX28, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN25, DX29, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN26, DX30, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN27, DX31, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN28, DX32, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN29, DX33, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN30, DX34, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN31, DX35, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN32, DX36, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN33, DX37, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN34, DX38, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN35, DX39, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN36, DX40, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN37, DX41, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN38, DX42, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN39, DX43, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN40, DX44, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN41, DX45, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN42, DX46, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN43, DX47, ALL_LAYERS);
+
+/*
+
+    MapKey(&ViperTQS, Q_BTN18, DX22, ALL_LAYERS);
+    MapKey(&ViperTQS, Q_BTN19, DX23, ALL_LAYERS);
+    MapKey(&ViperTQS, Q_BTN20, DX24, ALL_LAYERS);
+    MapKey(&ViperTQS, Q_BTN21, DX25, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN1, DX26, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN2, DX27, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN3, DX28, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN4, DX29, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN5, DX30, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN6, DX31, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN7, DX32, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN8, DX33, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN9, DX34, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN10, DX35, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN11, DX36, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN12, DX37, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN13, DX38, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN14, DX39, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN15, DX40, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN16, DX41, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN17, DX42, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN18, DX43, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN19, DX44, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN20, DX45, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN21, DX46, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN22, DX47, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN23, DX48, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN24, DX49, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN25, DX50, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN26, DX51, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN27, DX52, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN28, DX53, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN29, DX54, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN30, DX55, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN31, DX56, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN32, DX57, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN33, DX58, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN34, DX59, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN35, DX60, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN36, DX61, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN37, DX62, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN38, DX63, ALL_LAYERS);
+    MapKey(&ViperTQS, QB_BTN39, DX64, ALL_LAYERS);
+    //MapKey(&ViperTQS, QB_BTN40, DX65, ALL_LAYERS);
+    //MapKey(&ViperTQS, QB_BTN41, DX66, ALL_LAYERS);
+    //MapKey(&ViperTQS, QB_BTN42, DX67, ALL_LAYERS);
+    //MapKey(&ViperTQS, QB_BTN43, DX68, ALL_LAYERS);
+*/
 
     return 0;
 }
@@ -125,30 +234,105 @@ int InitJoystick()
     MapAxis(&Joystick, JOYX, DX_X_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);
     SetSCurve(&Joystick, JOYX, 0, 0, 0, 0, 0);
 
-    MapKey(&Joystick, STICK_PICKLE, F4BMS_PICKLE, ALL_LAYERS);
-    MapKey(&Joystick, STICK_PADDLE, F4BMS_PADDLE, ALL_LAYERS);
-    MapKey(&Joystick, STICK_TRIGGER_1, F4BMS_TRIGGER_1, ALL_LAYERS);
-    MapKey(&Joystick, STICK_TRIGGER_2, F4BMS_TRIGGER_2, ALL_LAYERS);
+    SetShiftButton(&Joystick, S3, 0, 0, IOTOGGLE);
 
-    MapKey(&Joystick, STICK_TMS_UP, F4BMS_TMS_UP, ALL_LAYERS);
-    MapKey(&Joystick, STICK_TMS_DOWN, F4BMS_TMS_DOWN, ALL_LAYERS);
-    MapKey(&Joystick, STICK_TMS_LEFT, F4BMS_TMS_LEFT, ALL_LAYERS);
-    MapKey(&Joystick, STICK_TMS_RIGHT, F4BMS_TMS_RIGHT, ALL_LAYERS);
+    // Countermeasures Management Switch (CMS)
+    MapKeyIO(&Joystick, H4U, F9, DX15);
+    MapKeyIO(&Joystick, H4D, F12, DX17);
+    MapKeyIO(&Joystick, H4L, KPENT, DX18);
 
-    MapKey(&Joystick, STICK_CMS_UP, F4BMS_CMS_UP, ALL_LAYERS);
-    MapKey(&Joystick, STICK_CMS_DOWN, F4BMS_CMS_DOWN, ALL_LAYERS);
-    MapKey(&Joystick, STICK_CMS_LEFT, F4BMS_CMS_LEFT, ALL_LAYERS);
-    MapKey(&Joystick, STICK_CMS_RIGHT, F4BMS_CMS_RIGHT, ALL_LAYERS);
+    // Data Management Switch (DMS)
+    MapKeyIO(&Joystick, H3R, NextWaypoint, DX12);
+    MapKeyIO(&Joystick, H3L, PrevWaypoint, DX14);
+    MapKeyIO(&Joystick, H3U, CHAIN(LOCK+PULSE+'q', D(), PULSE+'2', LOCK), DX11);
+    MapKeyIO(&Joystick, H3D, CHAIN(LOCK+PULSE+'w', D(), PULSE+'1', LOCK), DX13);
 
-    MapKey(&Joystick, STICK_DMS_UP, F4BMS_DMS_UP, ALL_LAYERS);
-    MapKey(&Joystick, STICK_DMS_DOWN, F4BMS_DMS_DOWN, ALL_LAYERS);
-    MapKey(&Joystick, STICK_DMS_LEFT, F4BMS_DMS_LEFT, ALL_LAYERS);
-    MapKey(&Joystick, STICK_DMS_RIGHT, F4BMS_DMS_RIGHT, ALL_LAYERS);
+    //define AWACSDeclare CHAIN(LOCK+PULSE+'q', D(), PULSE+'2', LOCK)
+    //define WingmanAttackMyTarget CHAIN(LOCK+PULSE+'w', D(), PULSE+'1', LOCK)
+    //MapKeyIO(&Joystick, H3U, AWACSDeclare, DX11);
+    //MapKeyIO(&Joystick, H3D, WingmanAttackMyTarget, DX13);
 
-    MapKey(&Joystick, STICK_HAT_UP, F4BMS_HAT_UP, ALL_LAYERS);
-    MapKey(&Joystick, STICK_HAT_DOWN, F4BMS_HAT_DOWN, ALL_LAYERS);
-    MapKey(&Joystick, STICK_HAT_LEFT, F4BMS_HAT_LEFT, ALL_LAYERS);
-    MapKey(&Joystick, STICK_HAT_RIGHT, F4BMS_HAT_RIGHT, ALL_LAYERS);
+    //MapKeyIO(&Joystick, H2L, ResetMasterCaution, DX10);
+
+//    MapKey(&Joystick, STICK_PICKLE, F4BMS_PICKLE, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_PADDLE, F4BMS_PADDLE, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_TRIGGER_1, F4BMS_TRIGGER_1, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_TRIGGER_2, F4BMS_TRIGGER_2, ALL_LAYERS);
+//
+//    MapKey(&Joystick, STICK_TMS_UP, F4BMS_TMS_UP, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_TMS_DOWN, F4BMS_TMS_DOWN, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_TMS_LEFT, F4BMS_TMS_LEFT, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_TMS_RIGHT, F4BMS_TMS_RIGHT, ALL_LAYERS);
+//
+//    MapKey(&Joystick, STICK_CMS_UP, F4BMS_CMS_UP, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_CMS_DOWN, F4BMS_CMS_DOWN, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_CMS_LEFT, F4BMS_CMS_LEFT, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_CMS_RIGHT, F4BMS_CMS_RIGHT, ALL_LAYERS);
+//
+//    MapKey(&Joystick, STICK_DMS_UP, F4BMS_DMS_UP, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_DMS_DOWN, F4BMS_DMS_DOWN, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_DMS_LEFT, F4BMS_DMS_LEFT, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_DMS_RIGHT, F4BMS_DMS_RIGHT, ALL_LAYERS);
+//
+//    MapKey(&Joystick, STICK_HAT_UP, F4BMS_HAT_UP, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_HAT_DOWN, F4BMS_HAT_DOWN, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_HAT_LEFT, F4BMS_HAT_LEFT, ALL_LAYERS);
+//    MapKey(&Joystick, STICK_HAT_RIGHT, F4BMS_HAT_RIGHT, ALL_LAYERS);
+
+/*
+    MapKey(&Joystick, TG1, DX1, ALL_LAYERS);
+    MapKey(&Joystick, S2, DX2, ALL_LAYERS);
+    MapKey(&Joystick, S3, DX3, ALL_LAYERS);
+    MapKey(&Joystick, S4, DX4, ALL_LAYERS);
+    MapKey(&Joystick, S1, DX5, ALL_LAYERS);
+    MapKey(&Joystick, TG2, DX6, ALL_LAYERS);
+    MapKey(&Joystick, H2U, DX7, ALL_LAYERS);
+    MapKey(&Joystick, H2R, DX8, ALL_LAYERS);
+    MapKey(&Joystick, H2D, DX9, ALL_LAYERS);
+    MapKey(&Joystick, H2L, DX10, ALL_LAYERS);
+    MapKey(&Joystick, H3U, DX11, ALL_LAYERS);
+    MapKey(&Joystick, H3R, DX12, ALL_LAYERS);
+    MapKey(&Joystick, H3P, DX13, ALL_LAYERS);
+    MapKey(&Joystick, H3D, DX14, ALL_LAYERS);
+    MapKey(&Joystick, H3L, DX15, ALL_LAYERS);
+    MapKey(&Joystick, H2P, DX16, ALL_LAYERS);
+    MapKey(&Joystick, H4U, DX17, ALL_LAYERS);
+    MapKey(&Joystick, H4R, DX18, ALL_LAYERS);
+    MapKey(&Joystick, H4D, DX19, ALL_LAYERS);
+    MapKey(&Joystick, H4L, DX20, ALL_LAYERS);
+    MapKey(&Joystick, H4P, DX21, ALL_LAYERS);
+    //MapKey(&Joystick, H1U, DX22, ALL_LAYERS);
+    //MapKey(&Joystick, H1R, DX23, ALL_LAYERS);
+    //MapKey(&Joystick, H1D, DX24, ALL_LAYERS);
+    //MapKey(&Joystick, H1L, DX25, ALL_LAYERS);
+
+    MapKey(&Joystick, TG1, DX48, ALL_LAYERS);
+    MapKey(&Joystick, S2, DX49, ALL_LAYERS);
+    MapKey(&Joystick, S3, DX50, ALL_LAYERS);
+    MapKey(&Joystick, S4, DX51, ALL_LAYERS);
+    MapKey(&Joystick, S1, DX52, ALL_LAYERS);
+    MapKey(&Joystick, TG2, DX53, ALL_LAYERS);
+    MapKey(&Joystick, H2U, DX54, ALL_LAYERS);
+    MapKey(&Joystick, H2R, DX55, ALL_LAYERS);
+    MapKey(&Joystick, H2D, DX56, ALL_LAYERS);
+    MapKey(&Joystick, H2L, DX57, ALL_LAYERS);
+    MapKey(&Joystick, H3U, DX58, ALL_LAYERS);
+    MapKey(&Joystick, H3R, DX59, ALL_LAYERS);
+    MapKey(&Joystick, H3P, DX60, ALL_LAYERS);
+    MapKey(&Joystick, H3D, DX61, ALL_LAYERS);
+    MapKey(&Joystick, H3L, DX62, ALL_LAYERS);
+    MapKey(&Joystick, H2P, DX63, ALL_LAYERS);
+    MapKey(&Joystick, H4U, DX64, ALL_LAYERS);
+    //MapKey(&Joystick, H4R, DX65, ALL_LAYERS);
+    //MapKey(&Joystick, H4D, DX66, ALL_LAYERS);
+    //MapKey(&Joystick, H4L, DX67, ALL_LAYERS);
+    //MapKey(&Joystick, H4P, DX68, ALL_LAYERS);
+    //MapKey(&Joystick, H1U, DX69, ALL_LAYERS);
+    //MapKey(&Joystick, H1R, DX70, ALL_LAYERS);
+    //MapKey(&Joystick, H1D, DX71, ALL_LAYERS);
+    //MapKey(&Joystick, H1L, DX72, ALL_LAYERS);
+
+*/
 
     return 0;
 }
@@ -168,11 +352,14 @@ int main()
     Configure(&TCASidestickXPilot, MODE_EXCLUDED);
     Configure(&TCASidestickXCopilot, MODE_EXCLUDED);
     Configure(&ViperBBox, MODE_EXCLUDED);
+    Configure(&ViperTQS, MODE_EXCLUDED);
     Configure(&T16000, MODE_EXCLUDED);
     Configure(&T16000L, MODE_EXCLUDED);
     Configure(&TFRPRudder, MODE_EXCLUDED);
     Configure(&TWCSThrottle, MODE_EXCLUDED);
     Configure(&TFRPHARudder, MODE_EXCLUDED);
+
+    //Configure(&Joystick, MODE_FILTERED);
 
     if (Init(&EventHandle)) {
         return 1;
@@ -180,12 +367,12 @@ int main()
 
     SetKBRate(32, 50);
     SetKBLayout(KB_ENG);
-    SetShiftButton(0, 0, 0, 0, 0, 0);
+    //SetShiftButton(0, 0, 0, 0, 0, 0);
 
     InitLeftMFD();
     InitRightMFD();
-    InitViperTQS();
     InitJoystick();
+    //InitViperTQS();
 
 }
 
